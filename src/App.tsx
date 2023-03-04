@@ -1,4 +1,5 @@
 
+import { Header } from "./components/Header";
 import "./styles/main.css";
 
 function App() {
@@ -6,7 +7,7 @@ function App() {
 
   return (
     <div className="w-screen min-h-screen bg-defaultWhite">
-      
+      <Header/>
     </div>
   )
 }

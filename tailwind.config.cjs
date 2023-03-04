@@ -7,10 +7,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily:{
-        'teko':['Teko','sans-serif'],
-        'lato':['Lato','sans-serif'],
-        'archivo-black':['"Archivo Black"', 'sans-serif'],
-        'archivo':['Archivo','sans-serif']
+        'archivo-black':'"Archivo Black"',
+        'lato':'Lato',
+        'archivo':'Archivo',
+        'teko':'Teko'
       },
       colors:{
         'defaultWhite':'#EFEFEF',
