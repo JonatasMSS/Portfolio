@@ -16,6 +16,9 @@ module.exports = {
         'defaultWhite':'#EFEFEF',
         'defaultWhiteGD':"#F0F0F0",
         'defaultBlack':'#0B0B0B',
+      },
+      boxShadow:{
+        'cartoon':"2px 2px 0px 0px black",
       }
       
     },
