@@ -6,8 +6,11 @@ import CssLogo from './assets/cssLogo.png';
 import FlutterLogo from './assets/FlutterLogo.webp';
 import GitLogo from './assets/GitLogo.png';
 import TailwindCss from './assets/tailwindcssLogo.png';
-import TesteImage from './assets/ImageTeste.png';
 
+
+
+
+import { Carousel } from "react-bootstrap";
 
 
 import { Header } from "./components/Header";
@@ -15,6 +18,7 @@ import "./styles/main.css";
 import { SkillsContainer } from "./components/SkillsContainer";
 import { CircleIconProjectContainer } from "./components/CircleIconProjectContainer";
 import { Footer } from "./components/Footer";
+import { ProjectItem } from "./components/ProjectItem";
 function App() {
 
   const Skills = [
@@ -96,29 +100,15 @@ function App() {
 
       {/* Projects Section */}
 
-      <div className="flex flex-col w-full items-center gap-5 my-14 px-4">
-        <span className="font-archivo-black">Projetos</span>
-        <div className="flex flex-col items-center  w-64 min-h-[20rem] bg-white border-2 border-black rounded-lg">
-          {/* Image */}
-
-          <img src={TesteImage} className="w-11/12 mt-5 h-36 rounded-lg" />
-
-
-          {/* Description Section */}
-          <div className="w-full flex flex-col h-full gap-3 px-4 my-2">
-            <span className="font-archivo-black">Titulo do projeto</span>
-            <span className="font-teko">Descrição breve do projeto localizada aqui</span>
-            <span className=" border-t-2 border-t-black font-teko font-semibold">Tecnologias usadas</span>
-            <div className="w-full flex ">
-              <CircleIconProjectContainer />
-            </div>
-          </div>
-        </div>
-      </div>
+      <Carousel>
+        <Carousel.Item>
+          <ProjectItem/>
+        </Carousel.Item>
+      </Carousel>
 
 
       {/* Footer */}
-      <Footer/>
+      <Footer />
     </div>
   )
 }
