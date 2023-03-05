@@ -7,14 +7,14 @@ import FlutterLogo from './assets/FlutterLogo.webp';
 import GitLogo from './assets/GitLogo.png';
 import TailwindCss from './assets/tailwindcssLogo.png';
 import TesteImage from './assets/ImageTeste.png';
-import Linkedin from './assets/linksquare.svg';
-import EmailLogo from './assets/email.png';
+
 
 
 import { Header } from "./components/Header";
 import "./styles/main.css";
 import { SkillsContainer } from "./components/SkillsContainer";
 import { CircleIconProjectContainer } from "./components/CircleIconProjectContainer";
+import { Footer } from "./components/Footer";
 function App() {
 
   const Skills = [
@@ -118,20 +118,7 @@ function App() {
 
 
       {/* Footer */}
-      <div className="w-full flex justify-start items-center px-2 bg-black py-3 m-0">
-        {/* Icons */}
-       
-        <div className="flex flex-col">
-          <div className="flex items-center">
-            <img src={Linkedin} alt="Linkedin logo" className="w-8" />
-            <span className="font-archivo text-white"> Linkedin</span>
-          </div>
-          <div className="flex items-center">
-            <img src={EmailLogo} alt="Email" className="w-8" />
-            <span className="font-archivo text-white">jonatas.miguelss@gmail.com</span>
-          </div>
-        </div>
-      </div>
+      <Footer/>
     </div>
   )
 }
