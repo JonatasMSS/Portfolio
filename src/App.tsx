@@ -60,6 +60,7 @@ function App() {
       title="Teste de projeto"
       description="Descrição do projeto"
       techs={[ReactLogo, HtmlLogo, FlutterLogo]}
+     
     />,
     <ProjectItem
       img={TesteImage}

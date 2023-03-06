@@ -10,6 +10,7 @@ type ProjectItemProps = {
     title: string;
     description: string;
     techs: Array<string>;
+    repoLink?:string;
 }
 
 export function ProjectItem({ ...props }: ProjectItemProps) {
@@ -42,10 +43,10 @@ export function ProjectItem({ ...props }: ProjectItemProps) {
                 </div>
             </div>
             
-            <div className=" w-full  bg-black/90 my-4 p-1 rounded-lg flex items-center justify-around">
+            <a href={props.repoLink} className=" w-full  bg-black/90 my-4 p-1 rounded-lg flex items-center justify-around">
                <img src={github} alt="Github" className="w-12"/>
                <span className="font-archivo-black text-white">Ir para o repositório</span>
-            </div>
+            </a>
 
         </div>
 

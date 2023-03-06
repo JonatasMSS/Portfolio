@@ -7,10 +7,10 @@ export function Footer() {
             {/* Icons */}
 
             <div className="flex flex-col">
-                <div className="flex items-center">
+                <a href='https://www.linkedin.com/in/jonatasmss/' className="flex items-center">
                     <img src={Linkedin} alt="Linkedin logo" className="w-8" />
                     <span className="font-archivo text-white"> Linkedin</span>
-                </div>
+                </a>
                 <div className="flex items-center">
                     <img src={EmailLogo} alt="Email" className="w-8" />
                     <span className="font-archivo text-white">jonatas.miguelss@gmail.com</span>
