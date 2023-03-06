@@ -15,8 +15,12 @@ import { Header } from "./components/Header";
 import { SkillsContainer } from "./components/SkillsContainer";
 import { Footer } from "./components/Footer";
 import { ProjectItem } from "./components/ProjectItem";
+import { useState } from "react";
 function App() {
 
+  const [projectIndex,setProjectIndex] = useState(0);
+  
+  
   const Skills = [
     {
       desc: 'React',
@@ -50,6 +54,20 @@ function App() {
   ]
 
 
+  const myProjects = [
+    <ProjectItem
+      img={TesteImage}
+      title="Teste de projeto"
+      description="Descrição do projeto"
+      techs={[ReactLogo, HtmlLogo, FlutterLogo]}
+    />,
+    <ProjectItem
+      img={TesteImage}
+      title="Teste de projeto 2"
+      description="Descrição do projeto"
+      techs={[ReactLogo, HtmlLogo]}
+    />
+  ]
 
 
 
@@ -95,16 +113,23 @@ function App() {
       </div>
 
       {/* Projects Section */}
-
+          
       <div className="flex flex-col w-full items-center gap-5 my-14 px-4">
-            <span className="font-archivo-black">Projetos</span>
-            <ProjectItem
-              img={TesteImage}
-              title="Teste de projeto"
-              description="Descrição do projeto"
-              techs={[ReactLogo,HtmlLogo,FlutterLogo]}
-            />
-       </div>
+        <span className="font-archivo-black">Projetos</span>
+
+        {/* Caroussel */}
+        <div className="flex w-full items-center justify-center gap-2">
+          <button onClick={() => { setProjectIndex(prev => prev === 0 ? (myProjects.length) - 1 : prev - 1)}} >
+            <img src={ButtonCarrousel} alt="Button carousel" className="w-14 -rotate-180" />
+          </button>
+          {
+            myProjects[projectIndex]
+          }
+          <button onClick={() => setProjectIndex(prev => prev >= (myProjects.length - 1) ? 0 : prev + 1)}>
+            <img src={ButtonCarrousel} alt="Button carousel" className="w-14" />
+          </button>
+        </div>
+      </div>
 
 
 
