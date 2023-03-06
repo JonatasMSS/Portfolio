@@ -1,3 +1,6 @@
+import "./styles/main.css";
+
+import TesteImage from './assets/ImageTeste.png';
 import Eu from "./assets/Eu.svg";
 import ReactLogo from "./assets/reactLogo.png";
 import JavaScriptLogo from "./assets/javascript-logo.png";
@@ -6,17 +9,10 @@ import CssLogo from './assets/cssLogo.png';
 import FlutterLogo from './assets/FlutterLogo.webp';
 import GitLogo from './assets/GitLogo.png';
 import TailwindCss from './assets/tailwindcssLogo.png';
-
-
-
-
-import { Carousel } from "react-bootstrap";
-
+import ButtonCarrousel from './assets/Button.svg';
 
 import { Header } from "./components/Header";
-import "./styles/main.css";
 import { SkillsContainer } from "./components/SkillsContainer";
-import { CircleIconProjectContainer } from "./components/CircleIconProjectContainer";
 import { Footer } from "./components/Footer";
 import { ProjectItem } from "./components/ProjectItem";
 function App() {
@@ -100,11 +96,17 @@ function App() {
 
       {/* Projects Section */}
 
-      <Carousel>
-        <Carousel.Item>
-          <ProjectItem/>
-        </Carousel.Item>
-      </Carousel>
+      <div className="flex flex-col w-full items-center gap-5 my-14 px-4">
+            <span className="font-archivo-black">Projetos</span>
+            <ProjectItem
+              img={TesteImage}
+              title="Teste de projeto"
+              description="Descrição do projeto"
+              techs={[ReactLogo,HtmlLogo,FlutterLogo]}
+            />
+       </div>
+
+
 
 
       {/* Footer */}
