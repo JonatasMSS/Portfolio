@@ -1,6 +1,6 @@
 
-import Linkedin from './assets/linksquare.svg';
-import EmailLogo from './assets/email.png';
+import Linkedin from '../assets/linksquare.svg';
+import EmailLogo from '../assets/email.png';
 export function Footer() {
     return (
         <div className="w-full flex justify-start items-center px-2 bg-black py-3 m-0">

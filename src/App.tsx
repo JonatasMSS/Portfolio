@@ -1,3 +1,6 @@
+import "./styles/main.css";
+
+import TesteImage from './assets/ImageTeste.png';
 import Eu from "./assets/Eu.svg";
 import ReactLogo from "./assets/reactLogo.png";
 import JavaScriptLogo from "./assets/javascript-logo.png";
@@ -6,17 +9,18 @@ import CssLogo from './assets/cssLogo.png';
 import FlutterLogo from './assets/FlutterLogo.webp';
 import GitLogo from './assets/GitLogo.png';
 import TailwindCss from './assets/tailwindcssLogo.png';
-import TesteImage from './assets/ImageTeste.png';
-
-
+import ButtonCarrousel from './assets/Button.svg';
 
 import { Header } from "./components/Header";
-import "./styles/main.css";
 import { SkillsContainer } from "./components/SkillsContainer";
-import { CircleIconProjectContainer } from "./components/CircleIconProjectContainer";
 import { Footer } from "./components/Footer";
+import { ProjectItem } from "./components/ProjectItem";
+import { useState } from "react";
 function App() {
 
+  const [projectIndex,setProjectIndex] = useState(0);
+  
+  
   const Skills = [
     {
       desc: 'React',
@@ -50,6 +54,20 @@ function App() {
   ]
 
 
+  const myProjects = [
+    <ProjectItem
+      img={TesteImage}
+      title="Teste de projeto"
+      description="Descrição do projeto"
+      techs={[ReactLogo, HtmlLogo, FlutterLogo]}
+    />,
+    <ProjectItem
+      img={TesteImage}
+      title="Teste de projeto 2"
+      description="Descrição do projeto"
+      techs={[ReactLogo, HtmlLogo]}
+    />
+  ]
 
 
 
@@ -95,30 +113,29 @@ function App() {
       </div>
 
       {/* Projects Section */}
-
+          
       <div className="flex flex-col w-full items-center gap-5 my-14 px-4">
         <span className="font-archivo-black">Projetos</span>
-        <div className="flex flex-col items-center  w-64 min-h-[20rem] bg-white border-2 border-black rounded-lg">
-          {/* Image */}
 
-          <img src={TesteImage} className="w-11/12 mt-5 h-36 rounded-lg" />
-
-
-          {/* Description Section */}
-          <div className="w-full flex flex-col h-full gap-3 px-4 my-2">
-            <span className="font-archivo-black">Titulo do projeto</span>
-            <span className="font-teko">Descrição breve do projeto localizada aqui</span>
-            <span className=" border-t-2 border-t-black font-teko font-semibold">Tecnologias usadas</span>
-            <div className="w-full flex ">
-              <CircleIconProjectContainer />
-            </div>
-          </div>
+        {/* Caroussel */}
+        <div className="flex w-full items-center justify-center gap-2">
+          <button onClick={() => { setProjectIndex(prev => prev === 0 ? (myProjects.length) - 1 : prev - 1)}} >
+            <img src={ButtonCarrousel} alt="Button carousel" className="w-14 -rotate-180" />
+          </button>
+          {
+            myProjects[projectIndex]
+          }
+          <button onClick={() => setProjectIndex(prev => prev >= (myProjects.length - 1) ? 0 : prev + 1)}>
+            <img src={ButtonCarrousel} alt="Button carousel" className="w-14" />
+          </button>
         </div>
       </div>
 
 
+
+
       {/* Footer */}
-      <Footer/>
+      <Footer />
     </div>
   )
 }
