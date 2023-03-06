@@ -124,7 +124,8 @@ function App() {
       {/* About me section */}
       <div className="flex flex-col items-center px-4 gap-2 w-full">
         <span className="font-archivo-black">Sobre mim</span>
-        <div className="w-full flex items-center justify-evenly bg-white min-h-[128px] shadow-cartoon border-[3px] rounded-lg border-black">
+        <div className="w-full flex p-2 items-center justify-evenly bg-white min-h-[128px] shadow-cartoon border-[3px] rounded-lg border-black">
+          <span className="font-lato text-sm font-semibold">Sou apaixonado por tecnologia e ciências. Desde pequeno, tive gosto por investigar e experimentar das mais diversas tecnologias. Quando entrei no ensino médio técnico, pude aprofundar meus conhecimentos tanto na robótica, como no curso de desenvolvimento de sistemas. Sempre tentei por em prática os meus conhecimentos: criando robôs, aplicativos, códigos e fazendo muitos experimentos</span>
         </div>
       </div>
 
