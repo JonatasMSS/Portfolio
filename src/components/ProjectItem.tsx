@@ -22,7 +22,7 @@ export function ProjectItem({ ...props }: ProjectItemProps) {
             <div className="flex flex-col items-center  w-64 min-h-[20rem] bg-white border-2 border-black rounded-lg">
                 {/* Image */}
 
-                <img src={props.img} className="w-11/12 mt-5 h-36 rounded-lg" />
+                <img src={props.img} className="w-11/12 mt-5 h-36 rounded-lg object-right-bottom" />
 
 
                 {/* Description Section */}

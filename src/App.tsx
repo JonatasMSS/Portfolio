@@ -2,14 +2,22 @@ import "./styles/main.css";
 
 import TesteImage from './assets/ImageTeste.png';
 import Eu from "./assets/Eu.svg";
+
+import FastifyLogo from './assets/FastifyLogo.png';
 import ReactLogo from "./assets/reactLogo.png";
 import JavaScriptLogo from "./assets/javascript-logo.png";
 import HtmlLogo from './assets/HtmlLogo.png';
 import CssLogo from './assets/cssLogo.png';
+import PrismaLogo from './assets/prisma.png';
 import FlutterLogo from './assets/FlutterLogo.webp';
 import GitLogo from './assets/GitLogo.png';
 import TailwindCss from './assets/tailwindcssLogo.png';
 import ButtonCarrousel from './assets/Button.svg';
+import SHabitDay from './assets/habitsSite.png';
+import SOxeIe from './assets/OxeIe.png';
+import SControleEstoque from './assets/controleEstoque.png';
+import SPokedex from './assets/pokedex.png';
+
 
 import { Header } from "./components/Header";
 import { SkillsContainer } from "./components/SkillsContainer";
@@ -22,6 +30,14 @@ function App() {
   
   
   const Skills = [
+    {
+      desc:'Fastify',
+      img:FastifyLogo
+    },
+    {
+      desc:'Prisma',
+      img:PrismaLogo
+    },
     {
       desc: 'React',
       img: ReactLogo
@@ -56,17 +72,33 @@ function App() {
 
   const myProjects = [
     <ProjectItem
-      img={TesteImage}
-      title="Teste de projeto"
-      description="Descrição do projeto"
-      techs={[ReactLogo, HtmlLogo, FlutterLogo]}
+      img={SHabitDay}
+      title="Controle de Hábitos"
+      description="Projeto criado durante aulas da NWS da RocketSeat. Consiste em um site que ajuda no controle de hábitos de um indivíduo durante os meses do ano. Fiz toda a estrutura do site, isto é, Front-end e back-end. Este ultimo, utilizei uma ORM - O prisma - e para requisições ao banco de dados, utilizei o Fastify, em vez do Express."
+      techs={[ReactLogo, HtmlLogo, TailwindCss, CssLogo,PrismaLogo]}
+      repoLink="https://github.com/JonatasMSS/habits-site-react"
      
     />,
     <ProjectItem
-      img={TesteImage}
-      title="Teste de projeto 2"
-      description="Descrição do projeto"
-      techs={[ReactLogo, HtmlLogo]}
+      img={SOxeIe}
+      title="Site de delivery - Oxe Ie"
+      description="Site de delivery de comidas feito baseando-se em proposta de um cliente. Utilizei um pouco mais a fundo do React e outras ferramentas de componentização, como Radix-UI, além de usar a API do whatsappweb para redirecionar mensagens diretas."
+      techs={[ReactLogo, HtmlLogo,TailwindCss,CssLogo]}
+      repoLink="https://github.com/JonatasMSS/Food-delivery"
+    />,
+    <ProjectItem
+      img={SControleEstoque}
+      title="Mobile app de gestão de estoque e vendas"
+      description="App de controle de estoque e vendas. Criei observando problemas de pequenos fornecedores de minha região. Usei ferramentas de armazenamento persistente - SQLite - e geração de documentos que podem ser salvos ou compartilhados entre redes sociais."
+      techs={[FlutterLogo]}
+      repoLink="https://github.com/JonatasMSS/ControleEstoqueApp"
+    />,
+    <ProjectItem
+      img={SPokedex}
+      title="Pokedex"
+      description="Site que coleta dados de Pokemons por meio de uma API. Criei durante aulas de um BootCamp da DIO. Entendi conceitos importantes do Javascript,html e CSS. Além disso, aprendi e usei requisições HTTP para tal coleta de dados"
+      techs={[HtmlLogo,CssLogo,JavaScriptLogo]}
+      repoLink="https://github.com/JonatasMSS/jonatasPokedex.github.io"
     />
   ]
 
