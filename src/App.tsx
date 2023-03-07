@@ -123,9 +123,9 @@ function App() {
         </div>
 
 
-        {/* About me and Skills Section */}
+      
 
-        <div className="flex flex-col md:flex-row md:items-start">
+        
 
           {/* About me section */}
           <div className="flex flex-col items-center px-4 gap-2 w-full">
@@ -152,7 +152,7 @@ function App() {
             </div>
           </div>
 
-        </div>
+       
         {/* Projects Section */}
 
         <div className="flex flex-col w-full items-center gap-5 my-14 px-4">
