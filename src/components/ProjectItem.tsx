@@ -10,7 +10,8 @@ type ProjectItemProps = {
     title: string;
     description: string;
     techs: Array<string>;
-    repoLink?:string;
+    repoLink?: string;
+    typeToScreen?: 'md' | 'lg'
 }
 
 export function ProjectItem({ ...props }: ProjectItemProps) {
@@ -18,34 +19,36 @@ export function ProjectItem({ ...props }: ProjectItemProps) {
 
 
     return (
-        <div className="flex flex-col">
-            <div className="flex flex-col items-center  w-64 min-h-[20rem] bg-white border-2 border-black rounded-lg">
+        <div className="flex flex-col w-min h-full m-0 justify-between">
+            <div className="flex flex-col items-center  w-64 h-full bg-white border-2 border-black rounded-lg">
                 {/* Image */}
 
                 <img src={props.img} className="w-11/12 mt-5 h-36 rounded-lg object-right-bottom" />
 
 
                 {/* Description Section */}
-                <div className="w-full flex flex-col h-full gap-3 px-4 my-2">
+                <div className="w-full flex flex-col justify-between h-full gap-3 px-4 my-2">
                     <span className="font-archivo-black">{props.title}</span>
                     <span className="font-teko">{props.description}</span>
-                    <span className=" border-t-2 border-t-black font-teko font-semibold">Tecnologias usadas</span>
-                    <div className="w-full flex gap-2 ">
-                        {
-                            props.techs.map((tech, i) => (
-                                <CircleIconProjectContainer
-                                    key={i}
-                                    img={tech}
-                                />
-                            ))
-                        }
+                    <div className="flex flex-col ">
+                        <span className=" border-t-2 border-t-black font-teko font-semibold">Tecnologias usadas</span>
+                        <div className="w-full flex gap-2 ">
+                            {
+                                props.techs.map((tech, i) => (
+                                    <CircleIconProjectContainer
+                                        key={i}
+                                        img={tech}
+                                    />
+                                ))
+                            }
+                        </div>
                     </div>
                 </div>
             </div>
-            
+
             <a href={props.repoLink} className=" w-full  bg-black/90 my-4 p-1 rounded-lg flex items-center justify-around">
-               <img src={github} alt="Github" className="w-12"/>
-               <span className="font-archivo-black text-white">Ir para o repositório</span>
+                <img src={github} alt="Github" className="w-12" />
+                <span className="font-archivo-black text-white">Ir para o repositório</span>
             </a>
 
         </div>
