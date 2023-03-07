@@ -11,6 +11,7 @@ type ProjectItemProps = {
     description: string;
     techs: Array<string>;
     repoLink?:string;
+    typeToScreen?: 'md' | 'lg'
 }
 
 export function ProjectItem({ ...props }: ProjectItemProps) {

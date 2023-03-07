@@ -18,6 +18,8 @@ import SOxeIe from './assets/OxeIe.png';
 import SControleEstoque from './assets/controleEstoque.png';
 import SPokedex from './assets/pokedex.png';
 
+import {useMediaQuery} from 'react-responsive'
+
 
 import { Header } from "./components/Header";
 import { SkillsContainer } from "./components/SkillsContainer";
@@ -105,6 +107,7 @@ function App() {
 
 
 
+  const isMediumScreen = useMediaQuery({query:'(min-width:800px)'})
 
 
   return (
@@ -155,7 +158,8 @@ function App() {
        
         {/* Projects Section */}
 
-        <div className="flex flex-col w-full items-center gap-5 my-14 px-4">
+        {
+          !isMediumScreen  ? <div className="flex flex-col w-full items-center gap-5 my-14 px-4">
           <span className="font-archivo-black md:text-2xl">Projetos</span>
 
           {/* Caroussel */}
@@ -170,7 +174,11 @@ function App() {
               <img src={ButtonCarrousel} alt="Button carousel" className="w-14" />
             </button>
           </div>
+        </div> :
+        <div className="w-full grid grid-flow-row grid-cols-3 my-10 bg-red-300 h-32">
+          
         </div>
+        }
 
 
 
