@@ -137,9 +137,9 @@ function App() {
 
           {/* Skills Section */}
 
-          <div className="flex flex-col w-full items-center gap-10 px-4 mt-10 md:mt-0">
+          <div className="flex flex-col items-center gap-10 px-4 mt-10 ">
             <span className="font-archivo-black md:text-2xl">Skills</span>
-            <div className="w-full grid grid-flow-row grid-cols-3 gap-9 lg:gap-12 px-5">
+            <div className="grid grid-flow-row grid-cols-3 gap-9 md:gap-20 ">
               {
                 Skills.map((Skill, i) => (
                   <SkillsContainer
