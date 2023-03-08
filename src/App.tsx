@@ -20,6 +20,7 @@ import SPokedex from './assets/pokedex.png';
 
 import { useState, useRef } from "react";
 import { number } from "prop-types";
+import { Header } from "./components/Header";
 function App() {
 
   
@@ -29,9 +30,7 @@ function App() {
 
   return (
    <div className="w-screen min-h-screen">
-      <div className=" w-full  bg-darkBlue flex items-start p-2">
-        <span className="font-archivo font-semibold text-white">JMigs</span>
-      </div>
+      <Header/>
    </div>
   )
 }
