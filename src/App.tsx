@@ -19,7 +19,7 @@ import SControleEstoque from './assets/controleEstoque.png';
 import SPokedex from './assets/pokedex.png';
 import SimpleLinkedin from './assets/SimpleLinkedin.svg';
 import SimpleGithub from './assets/SimpleGit.svg';
-
+import ProgressionLine from './assets/ProgressionLine.svg';
 
 
 import { useState, useRef } from "react";
@@ -33,7 +33,7 @@ function App() {
 
 
   return (
-    <div className="w-screen min-h-screen">
+    <div className=" min-h-screen">
       <Header />
 
       {/* Introduction section */}
@@ -53,9 +53,39 @@ function App() {
       </div>
 
       {/* About me section */}
-      <div className="w-full flex flex-col font-archivo items-center gap-2 mt-2 p-2">
+      <div className="w-full flex flex-col font-archivo items-center gap-2 my-5 p-2">
         <span className="font-semibold md:text-2xl lg:text-3xl">Sobre mim</span>
         <span className="text-sm  font-medium text-justify w-full md:w-11/12 md:text-xl lg:text-2xl lg:w-10/12">Sempre fui apaixonado por tecnologia, desde novo tive oportunidade de me aventurar nesse mundo. Quando entrei no ensino médio, pude aprofundar meus conhecimentos sobre programação quando entrei na robótica e fiz um curso técnico de desenvolvimento de softwares. Atualmente, Estou buscando aprimorar meus conhecimentos sobre desenvolvimento front-end, usando react e reactJs, e um pouco de back-end, futuramente pretendo ser full-stack. Já desenvolvi projetos para problemas locais, os quais me proporcionaram uma dose de desafio e grandes aprendizados</span>
+      </div>
+
+      {/* Skills Section */}
+      <div className="w-full flex flex-col gap-2 font-archivo items-center my-5">
+        <span className="font-semibold md:text-2xl lg:text-3xl"> Skills </span>
+        <div className="w-full grid grid-flow-row grid-cols-1 md:grid-cols-2 items-center px-10">
+
+          <div className="w-full rounded-lg p-1 px-2 flex bg-white border-2 border-black shadow-cartoon">
+
+            {/* IMG */}
+            <img src={ReactLogo} className="w-20 lg:w-28 m-2 border-2 border-black rounded-full p-2" />
+
+            {/* Data */}
+            <div className="flex w-full flex-col justify-between items-center">
+              <div className="flex flex-col items-center mb-2">
+                <span className="font-archivo font-bold md:text-xl lg:text-3xl "> React</span>
+                <span className="font-archivo font-normal text-xs md:text-sm lg:text-xl">Experiência(anos)</span>
+              </div>
+
+              <div className=" flex w-full flex-col ">
+                <div className="w-full h-1 bg-defaultBlue rounded-lg mb-2 md:mb-1">
+
+                </div>
+                <img src={ProgressionLine} alt="Progressão" className="" />
+              </div>
+            </div>
+
+          </div>
+
+        </div>
       </div>
 
     </div>
