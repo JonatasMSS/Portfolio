@@ -17,6 +17,7 @@ import SHabitDay from './assets/habitsSite.png';
 import SOxeIe from './assets/OxeIe.png';
 import SControleEstoque from './assets/controleEstoque.png';
 import SPokedex from './assets/pokedex.png';
+import ReactLogo from "./assets/reactLogo.png";
 import SimpleLinkedin from './assets/SimpleLinkedin.svg';
 import SimpleGithub from './assets/SimpleGit.svg';
 
@@ -64,8 +65,16 @@ function App() {
         <span className="font-semibold md:text-2xl lg:text-3xl"> Skills </span>
         <div className="w-full grid gap-12 grid-flow-row grid-cols-1 md:grid-cols-2 items-center px-10">
 
-          <SkillContainer/>
-          <SkillContainer/>
+          <SkillContainer
+            img={ReactLogo}
+            title="React"
+            experience={1.5}
+          />
+          <SkillContainer
+            img={ReactLogo}
+            title="React 2"
+            experience={0.5}
+          />
           
         </div>
       </div>
