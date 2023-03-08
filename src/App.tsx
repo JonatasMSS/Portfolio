@@ -4,7 +4,7 @@ import TesteImage from './assets/ImageTeste.png';
 
 import EuSB from './assets/Eu sem borda.svg';
 import FastifyLogo from './assets/FastifyLogo.png';
-import ReactLogo from "./assets/reactLogo.png";
+
 import JavaScriptLogo from "./assets/javascript-logo.png";
 import HtmlLogo from './assets/HtmlLogo.png';
 import CssLogo from './assets/cssLogo.png';
@@ -19,12 +19,13 @@ import SControleEstoque from './assets/controleEstoque.png';
 import SPokedex from './assets/pokedex.png';
 import SimpleLinkedin from './assets/SimpleLinkedin.svg';
 import SimpleGithub from './assets/SimpleGit.svg';
-import ProgressionLine from './assets/ProgressionLine.svg';
+
 
 
 import { useState, useRef } from "react";
 import { number } from "prop-types";
 import { Header } from "./components/Header";
+import { SkillContainer } from "./components/SkillContainer";
 function App() {
 
 
@@ -63,28 +64,8 @@ function App() {
         <span className="font-semibold md:text-2xl lg:text-3xl"> Skills </span>
         <div className="w-full grid grid-flow-row grid-cols-1 md:grid-cols-2 items-center px-10">
 
-          <div className="w-full rounded-lg p-1 px-2 flex bg-white border-2 border-black shadow-cartoon">
-
-            {/* IMG */}
-            <img src={ReactLogo} className="w-20 lg:w-28 m-2 border-2 border-black rounded-full p-2" />
-
-            {/* Data */}
-            <div className="flex w-full flex-col justify-between items-center">
-              <div className="flex flex-col items-center mb-2">
-                <span className="font-archivo font-bold md:text-xl lg:text-3xl "> React</span>
-                <span className="font-archivo font-normal text-xs md:text-sm lg:text-xl">Experiência(anos)</span>
-              </div>
-
-              <div className=" flex w-full flex-col ">
-                <div className="w-full h-1 bg-defaultBlue rounded-lg mb-2 md:mb-1">
-
-                </div>
-                <img src={ProgressionLine} alt="Progressão" className="" />
-              </div>
-            </div>
-
-          </div>
-
+          <SkillContainer/>
+          
         </div>
       </div>
 
