@@ -28,10 +28,11 @@ function App() {
 
 
   return (
-   
-      <div className="">
-        <h2>New version</h2>
+   <div className="w-screen min-h-screen">
+      <div className=" w-full  bg-darkBlue flex items-start p-2">
+        <span className="font-archivo font-semibold text-white">JMigs</span>
       </div>
+   </div>
   )
 }
 
