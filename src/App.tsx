@@ -1,8 +1,8 @@
 import "./styles/main.css";
 
 import TesteImage from './assets/ImageTeste.png';
-import Eu from "./assets/Eu.svg";
 
+import EuSB from './assets/Eu sem borda.svg';
 import FastifyLogo from './assets/FastifyLogo.png';
 import ReactLogo from "./assets/reactLogo.png";
 import JavaScriptLogo from "./assets/javascript-logo.png";
@@ -17,21 +17,48 @@ import SHabitDay from './assets/habitsSite.png';
 import SOxeIe from './assets/OxeIe.png';
 import SControleEstoque from './assets/controleEstoque.png';
 import SPokedex from './assets/pokedex.png';
+import SimpleLinkedin from './assets/SimpleLinkedin.svg';
+import SimpleGithub from './assets/SimpleGit.svg';
+
+
 
 import { useState, useRef } from "react";
 import { number } from "prop-types";
 import { Header } from "./components/Header";
 function App() {
 
-  
+
 
 
 
 
   return (
-   <div className="w-screen min-h-screen">
-      <Header/>
-   </div>
+    <div className="w-screen min-h-screen">
+      <Header />
+
+      {/* Introduction section */}
+      <div className="w-full bg-defaultBlue flex items-center justify-around ">
+        {/* Text */}
+        <div className="flex flex-col font-archivo font-semibold text-white p-2 pt-8  md:pt-12 md:text-3xl lg:pt-16 lg:text-5xl">
+          <span>Olá! Sou Jonatas Miguel,</span>
+          <span>Desenvolvedor Front-end</span>
+          <div className="flex gap-2 mt-4 ">
+            <a href="" className="hover:scale-125 transition-transform"><img src={SimpleLinkedin} alt="Simple Linkedin" className="w-8 md:w-12 lg:w-16" /></a>
+
+            <a href="" className="hover:scale-125 transition-transform"><img src={SimpleGithub} alt="Simple Github" className="w-8 md:w-12 lg:w-16" /></a>
+          </div>
+        </div>
+
+        <img src={EuSB} className="w-32 md:w-40 lg:w-52" />
+      </div>
+
+      {/* About me section */}
+      <div className="w-full flex flex-col font-archivo items-center gap-2 mt-2 p-2">
+        <span className="font-semibold md:text-2xl lg:text-3xl">Sobre mim</span>
+        <span className="text-sm  font-medium text-justify w-full md:w-11/12 md:text-xl lg:text-2xl lg:w-10/12">Sempre fui apaixonado por tecnologia, desde novo tive oportunidade de me aventurar nesse mundo. Quando entrei no ensino médio, pude aprofundar meus conhecimentos sobre programação quando entrei na robótica e fiz um curso técnico de desenvolvimento de softwares. Atualmente, Estou buscando aprimorar meus conhecimentos sobre desenvolvimento front-end, usando react e reactJs, e um pouco de back-end, futuramente pretendo ser full-stack. Já desenvolvi projetos para problemas locais, os quais me proporcionaram uma dose de desafio e grandes aprendizados</span>
+      </div>
+
+    </div>
   )
 }
 
