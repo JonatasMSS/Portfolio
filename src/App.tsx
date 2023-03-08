@@ -62,8 +62,9 @@ function App() {
       {/* Skills Section */}
       <div className="w-full flex flex-col gap-2 font-archivo items-center my-5">
         <span className="font-semibold md:text-2xl lg:text-3xl"> Skills </span>
-        <div className="w-full grid grid-flow-row grid-cols-1 md:grid-cols-2 items-center px-10">
+        <div className="w-full grid gap-12 grid-flow-row grid-cols-1 md:grid-cols-2 items-center px-10">
 
+          <SkillContainer/>
           <SkillContainer/>
           
         </div>

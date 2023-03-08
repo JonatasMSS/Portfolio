@@ -1,6 +1,7 @@
 import ProgressionLine from '../assets/ProgressionLine.svg';
 
 import ReactLogo from "../assets/reactLogo.png";
+import { ProgressLine } from './ProgressionLine';
 export function SkillContainer() {
     return (
         <div className="w-full rounded-lg p-1 px-2 flex bg-white border-2 border-black shadow-cartoon">
@@ -16,9 +17,7 @@ export function SkillContainer() {
                 </div>
 
                 <div className=" flex w-full flex-col ">
-                    <div className="w-full h-1 bg-defaultBlue rounded-lg mb-2 md:mb-1">
-
-                    </div>
+                    <ProgressLine/>
                     <img src={ProgressionLine} alt="Progressão" className="" />
                 </div>
             </div>
