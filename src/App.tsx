@@ -12,11 +12,6 @@ import PrismaLogo from './assets/prisma.png';
 import FlutterLogo from './assets/FlutterLogo.webp';
 import GitLogo from './assets/GitLogo.png';
 import TailwindCss from './assets/tailwindcssLogo.png';
-import ButtonCarrousel from './assets/Button.svg';
-import SHabitDay from './assets/habitsSite.png';
-import SOxeIe from './assets/OxeIe.png';
-import SControleEstoque from './assets/controleEstoque.png';
-import SPokedex from './assets/pokedex.png';
 import ReactLogo from "./assets/reactLogo.png";
 import SimpleLinkedin from './assets/SimpleLinkedin.svg';
 import SimpleGithub from './assets/SimpleGit.svg';
@@ -30,7 +25,9 @@ import { SkillContainer } from "./components/SkillContainer";
 function App() {
 
 
-
+  const SkillsDataToComponent:Array<{name:string,exp:0.5|1|1.5|2, img:string}> = [
+    {name:'React',exp:1,img:ReactLogo},{name:'Javascript',exp:1.5,img:JavaScriptLogo},{name:'Html',exp:2,img:HtmlLogo},{name:'Css',exp:1.5,img:CssLogo},{name:'TailwindCss',exp:0.5,img:TailwindCss},{name:'Flutter',exp:2,img:FlutterLogo},{name:'Prisma',exp:0.5,img:PrismaLogo},{name:'Fastify',exp:0.5,img:FastifyLogo},{name:'Git',exp:1.5,img:GitLogo}
+  ]
 
 
 
@@ -64,18 +61,16 @@ function App() {
       <div className="w-full flex flex-col gap-2 font-archivo items-center my-5">
         <span className="font-semibold md:text-2xl lg:text-3xl"> Skills </span>
         <div className="w-full grid gap-12 grid-flow-row grid-cols-1 md:grid-cols-2 items-center px-10">
-
-          <SkillContainer
-            img={ReactLogo}
-            title="React"
-            experience={1.5}
-          />
-          <SkillContainer
-            img={ReactLogo}
-            title="React 2"
-            experience={0.5}
-          />
-          
+          {
+            SkillsDataToComponent.map((skill,i) => 
+                <SkillContainer
+                  key={i}
+                  title={skill.name}
+                  experience={skill.exp}
+                  img={skill.img}
+                />
+              )
+          }
         </div>
       </div>
 

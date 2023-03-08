@@ -19,7 +19,7 @@ export function SkillContainer({...props}: SkillContainerProps) {
         <div className="w-full rounded-lg p-1 px-2 flex bg-white border-2 border-black shadow-cartoon">
 
             {/* IMG */}
-            <img src={props.img} className="w-20 lg:w-28 m-2 border-2 border-black rounded-full p-2" />
+            <img src={props.img} className="w-20 lg:w-28 m-2 border-2 border-black rounded-lg p-2" />
 
             {/* Data */}
             <div className="flex w-full flex-col justify-between items-center">
