@@ -1,7 +1,6 @@
 import "./styles/main.css";
 
 import TesteImage from './assets/ImageTeste.png';
-
 import EuSB from './assets/Eu sem borda.svg';
 import FastifyLogo from './assets/FastifyLogo.png';
 
@@ -17,22 +16,25 @@ import SimpleLinkedin from './assets/SimpleLinkedin.svg';
 import SimpleGithub from './assets/SimpleGit.svg';
 
 
-
-import { useState, useRef } from "react";
-import { number } from "prop-types";
+import { useMediaQuery } from 'react-responsive'
 import { Header } from "./components/Header";
 import { SkillContainer } from "./components/SkillContainer";
 function App() {
 
 
-  const SkillsDataToComponent:Array<{name:string,exp:0.5|1|1.5|2, img:string}> = [
-    {name:'React',exp:1,img:ReactLogo},{name:'Javascript',exp:1.5,img:JavaScriptLogo},{name:'Html',exp:2,img:HtmlLogo},{name:'Css',exp:1.5,img:CssLogo},{name:'TailwindCss',exp:0.5,img:TailwindCss},{name:'Flutter',exp:2,img:FlutterLogo},{name:'Prisma',exp:0.5,img:PrismaLogo},{name:'Fastify',exp:0.5,img:FastifyLogo},{name:'Git',exp:1.5,img:GitLogo}
+  //Verify screen size
+  const isSmall = useMediaQuery({ query: '(max-width:799px)' })
+
+
+
+  const SkillsDataToComponent: Array<{ name: string, exp: 0.5 | 1 | 1.5 | 2, img: string }> = [
+    { name: 'React', exp: 1, img: ReactLogo }, { name: 'Javascript', exp: 1.5, img: JavaScriptLogo }, { name: 'Html', exp: 2, img: HtmlLogo }, { name: 'Css', exp: 1.5, img: CssLogo }, { name: 'TailwindCss', exp: 0.5, img: TailwindCss }, { name: 'Flutter', exp: 2, img: FlutterLogo }, { name: 'Prisma', exp: 0.5, img: PrismaLogo }, { name: 'Fastify', exp: 0.5, img: FastifyLogo }, { name: 'Git', exp: 1.5, img: GitLogo }
   ]
 
 
 
   return (
-    <div className=" min-h-screen">
+    <div className="min-h-screen">
       <Header />
 
       {/* Introduction section */}
@@ -57,21 +59,55 @@ function App() {
         <span className="text-sm  font-medium text-justify w-full md:w-11/12 md:text-xl lg:text-2xl lg:w-10/12">Sempre fui apaixonado por tecnologia, desde novo tive oportunidade de me aventurar nesse mundo. Quando entrei no ensino médio, pude aprofundar meus conhecimentos sobre programação quando entrei na robótica e fiz um curso técnico de desenvolvimento de softwares. Atualmente, Estou buscando aprimorar meus conhecimentos sobre desenvolvimento front-end, usando react e reactJs, e um pouco de back-end, futuramente pretendo ser full-stack. Já desenvolvi projetos para problemas locais, os quais me proporcionaram uma dose de desafio e grandes aprendizados</span>
       </div>
 
+
       {/* Skills Section */}
       <div className="w-full flex flex-col gap-2 font-archivo items-center my-5">
         <span className="font-semibold md:text-2xl lg:text-3xl"> Skills </span>
         <div className="w-full grid gap-12 grid-flow-row grid-cols-1 md:grid-cols-2 items-center px-10">
           {
-            SkillsDataToComponent.map((skill,i) => 
-                <SkillContainer
-                  key={i}
-                  title={skill.name}
-                  experience={skill.exp}
-                  img={skill.img}
-                />
-              )
+            SkillsDataToComponent.map((skill, i) =>
+              <SkillContainer
+                key={i}
+                title={skill.name}
+                experience={skill.exp}
+                img={skill.img}
+              />
+            )
           }
         </div>
+      </div>
+
+      {/* Project Section */}
+      <div className="w-full flex flex-col items-center p-5 gap-5">
+        <span className="font-semibold md:text-2xl lg:text-3xl">Projetos</span>
+        {
+          isSmall ?
+            <div className="w-10/12 flex flex-col items-center rounded-lg bg-white shadow-cartoon border-2 border-black">
+              <div className=" p-2 my-3">
+                <img src={TesteImage} className="rounded-sm  " />
+              </div>
+
+              {/* Text section */}
+              <div className="w-full  flex  items-center gap-2 flex-col px-2">
+                <span className="font-archivo font-semibold break-words w-full text-center text-base ">Titulo do projeto</span>
+                <span className="font-archivo w-full  break-words text-base ">Descrição breve do projeto</span>
+              </div>
+
+              {/* Tecnologias usadas */}
+              <div className=" w-full flex flex-col items-start p-2 ">
+                <span className="font-archivo font-semibold text-base">Tecnologias Usadas</span>
+                <div className="w-full h-0.5 bg-black rounded-lg"/>
+
+                {/* TODO: TRANSFORM THIS INTO A COMPONENT */}
+                <div className="w-full flex">
+                  <div className="w-9 h-9 bg-gray-500 rounded-full m-2 p-1 border-2 border-black ">
+                    <img src={ReactLogo} alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            : <h2>False</h2>
+        }
       </div>
 
     </div>
