@@ -1,15 +1,17 @@
+import { CircularIcon } from "./CircularIcon";
 
 
 
-interface ProjectItemMobileProps{
-    img:string;
-    title:string;
-    description:string;
+interface ProjectItemMobileProps {
+    img: string;
+    title: string;
+    description: string;
+    techs?: Array<string>;
 
 }
 
 
-export function ProjectItemMobile({...props}:ProjectItemMobileProps) {
+export function ProjectItemMobile({ ...props }: ProjectItemMobileProps) {
     return (
         <div className="w-10/12 flex flex-col items-center rounded-lg bg-white shadow-cartoon border-2 border-black">
             <div className=" p-2 my-3">
@@ -28,7 +30,15 @@ export function ProjectItemMobile({...props}:ProjectItemMobileProps) {
                 <div className="w-full h-0.5 bg-black rounded-lg" />
 
                 {/* TODO: TRANSFORM THIS INTO A COMPONENT */}
-               
+                <div className="grid grid-flow-row grid-cols-5 items-center justify-center w-full">
+                    {
+                        props.techs?.map(tech => (
+                            <CircularIcon
+                                img={tech}
+                            />
+                        ))
+                    }
+                </div>
             </div>
         </div>
     )

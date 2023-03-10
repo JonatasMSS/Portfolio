@@ -88,8 +88,31 @@ function App() {
               title="Teste"
               description="Descrição do Projeto"
               img={TesteImage}
+              techs={[ReactLogo]}
             />
-            : <h2>False</h2>
+            : <div className=" flex w-full items-center ">
+              <div className=" w-1/2 h-52 border-2 rounded-lg bg-gray-400 border-black shadow-cartoon" />
+
+              <div className="w-1/2 h-52 flex flex-col justify-between items-end absolute right-10 z-10 ">
+                <span className="font-archivo font-semibold text-2xl">Titulo do projeto</span>
+
+                <div className="border-2 w-full p-2 h-32   rounded-lg border-black shadow-cartoon bg-white ">
+                  <span className="text-xl font-archivo ">Descrição do projeto</span>
+                </div>
+
+                <div className="w-11/12  bottom-0 grid grid-flow-row  grid-cols-6">
+                  {
+                    Array.from({ length: 6 }).map(e => (
+                      <CircularIcon
+                        img={ReactLogo}
+                      />
+                    ))
+                  }
+                </div>
+              </div>
+
+
+            </div>
         }
       </div>
 
