@@ -19,6 +19,7 @@ import SimpleGithub from './assets/SimpleGit.svg';
 import { useMediaQuery } from 'react-responsive'
 import { Header } from "./components/Header";
 import { SkillContainer } from "./components/SkillContainer";
+import { CircularIcon } from "./components/CircularIcon";
 function App() {
 
 
@@ -99,11 +100,9 @@ function App() {
                 <div className="w-full h-0.5 bg-black rounded-lg"/>
 
                 {/* TODO: TRANSFORM THIS INTO A COMPONENT */}
-                <div className="w-full flex">
-                  <div className="w-9 h-9 bg-gray-500 rounded-full m-2 p-1 border-2 border-black ">
-                    <img src={ReactLogo} alt="" />
-                  </div>
-                </div>
+                <CircularIcon
+                  img={ReactLogo}
+                />
               </div>
             </div>
             : <h2>False</h2>
