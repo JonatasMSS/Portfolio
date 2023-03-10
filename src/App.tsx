@@ -20,6 +20,7 @@ import { useMediaQuery } from 'react-responsive'
 import { Header } from "./components/Header";
 import { SkillContainer } from "./components/SkillContainer";
 import { CircularIcon } from "./components/CircularIcon";
+import { ProjectItemMobile } from "./components/ProjectItemMobie";
 function App() {
 
 
@@ -83,28 +84,11 @@ function App() {
         <span className="font-semibold md:text-2xl lg:text-3xl">Projetos</span>
         {
           isSmall ?
-            <div className="w-10/12 flex flex-col items-center rounded-lg bg-white shadow-cartoon border-2 border-black">
-              <div className=" p-2 my-3">
-                <img src={TesteImage} className="rounded-sm  " />
-              </div>
-
-              {/* Text section */}
-              <div className="w-full  flex  items-center gap-2 flex-col px-2">
-                <span className="font-archivo font-semibold break-words w-full text-center text-base ">Titulo do projeto</span>
-                <span className="font-archivo w-full  break-words text-base ">Descrição breve do projeto</span>
-              </div>
-
-              {/* Tecnologias usadas */}
-              <div className=" w-full flex flex-col items-start p-2 ">
-                <span className="font-archivo font-semibold text-base">Tecnologias Usadas</span>
-                <div className="w-full h-0.5 bg-black rounded-lg"/>
-
-                {/* TODO: TRANSFORM THIS INTO A COMPONENT */}
-                <CircularIcon
-                  img={ReactLogo}
-                />
-              </div>
-            </div>
+            <ProjectItemMobile
+              title="Teste"
+              description="Descrição do Projeto"
+              img={TesteImage}
+            />
             : <h2>False</h2>
         }
       </div>
