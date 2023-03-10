@@ -21,6 +21,7 @@ import { Header } from "./components/Header";
 import { SkillContainer } from "./components/SkillContainer";
 import { CircularIcon } from "./components/CircularIcon";
 import { ProjectItemMobile } from "./components/ProjectItemMobie";
+import { ProjectItemLarge } from "./components/ProjectItemLarge";
 function App() {
 
 
@@ -80,7 +81,7 @@ function App() {
       </div>
 
       {/* Project Section */}
-      <div className="w-full flex flex-col items-center p-5 gap-5">
+      <div className={`w-full flex flex-col items-center p-5 ${isSmall ? 'gap-5' : 'gap-20'}`}>
         <span className="font-semibold md:text-2xl lg:text-3xl">Projetos</span>
         {
           isSmall ?
@@ -90,29 +91,14 @@ function App() {
               img={TesteImage}
               techs={[ReactLogo]}
             />
-            : <div className=" flex w-full items-center ">
-              <div className=" w-1/2 h-52 border-2 rounded-lg bg-gray-400 border-black shadow-cartoon" />
-
-              <div className="w-1/2 h-52 flex flex-col justify-between items-end absolute right-10 z-10 ">
-                <span className="font-archivo font-semibold text-2xl">Titulo do projeto</span>
-
-                <div className="border-2 w-full p-2 h-32   rounded-lg border-black shadow-cartoon bg-white ">
-                  <span className="text-xl font-archivo ">Descrição do projeto</span>
-                </div>
-
-                <div className="w-11/12  bottom-0 grid grid-flow-row  grid-cols-6">
-                  {
-                    Array.from({ length: 6 }).map(e => (
-                      <CircularIcon
-                        img={ReactLogo}
-                      />
-                    ))
-                  }
-                </div>
-              </div>
-
-
-            </div>
+            : Array.from({ length: 5 }).map(e => (
+              <ProjectItemLarge
+                img={TesteImage}
+                title="Teste"
+                description="Descrição do projeto base"
+                techs={[ReactLogo,JavaScriptLogo]}
+              />
+            ))
         }
       </div>
 
