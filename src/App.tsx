@@ -150,7 +150,7 @@ function App() {
       <div className=" w-full items-center flex flex-col gap-5 font-archivo my-20 md:px-20 lg:px-40 ">
         <span className="font-semibold md:text-2xl lg:text-3xl"> Fale comigo </span>
         <span className="text-base text-center md:text-2xl lg:text-3xl">Estou buscando uma primeira oportunidade em trabalhar em uma empresa no setor de desenvolvimento ou em um projeto em equipe</span>
-        <a href="" className="flex items-center w-fit bg-white border-2 p-2 md:p-5  rounded-lg border-black hover:shadow-cartoon hover:scale-110 transition-all duration-200 ease-in-out">
+        <a href="mailto:jonatas.miguelss@gmail.com" className="flex items-center w-fit bg-white border-2 p-2 md:p-5  rounded-lg border-black hover:shadow-cartoon hover:scale-110 transition-all duration-200 ease-in-out">
           <span className="font-archivo font-semibold text-sm md:text-xl lg:text-2xl ">Entre em contato</span>
         </a>  
       </div>
