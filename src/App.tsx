@@ -23,7 +23,7 @@ import SEstoqueControle from './assets/controleEstoque.png';
 import { useMediaQuery } from 'react-responsive'
 import { Header } from "./components/Header";
 import { SkillContainer } from "./components/SkillContainer";
-import { CircularIcon } from "./components/CircularIcon";
+
 import { ProjectItemMobile } from "./components/ProjectItemMobie";
 import { ProjectItemLarge } from "./components/ProjectItemLarge";
 
@@ -33,6 +33,7 @@ type projectProps = {
   description: string;
   img: string;
   techs: Array<string>
+  link?:string;
 }
 
 function App() {
@@ -52,25 +53,29 @@ function App() {
       title: 'Site de Delivery',
       description: 'Baseando-me na necessidade de um cliente, tive a ideia de criar um site de deliveries. Todo o desing foi baseando-se nas informações dadas pelo cliente. Além disso, optei por usar o Firebase Hosting e envio de pedidos por meio da Api whatsapp.',
       img: SDelivery,
-      techs: [ReactLogo, TailwindCss, JavaScriptLogo]
+      techs: [ReactLogo, TailwindCss, JavaScriptLogo],
+      link:'https://github.com/JonatasMSS/Food-delivery'
     },
     {
       title: 'Registro e analise de hábitos',
       description: 'Criado durante um evento da Rocketseat, o site de hábitos foi uma grande oportunidade de aprendizados. Utilizei no projeto ferramentas de estilização, aprendi a lidar com arquitetura de pastas e uso de ORM"s para criação de banco de dados.',
       img: SHabitSite,
-      techs: [ReactLogo, JavaScriptLogo, FastifyLogo, PrismaLogo]
+      techs: [ReactLogo, JavaScriptLogo, FastifyLogo, PrismaLogo],
+      link:"https://github.com/JonatasMSS/habits-site-react"
     },
     {
       title: 'App de controle de estoque e vendas',
       description: 'Esse projeto criei baseando-se na necessidade de um pequeno fornecedor de produtos. A ideia era criar um App que pudesse ajuda-lo a controlar seu estoque e gerar documentos de vendas desses produtos as lojas. Foi um dos primeiros desáfios que tive, o qual veio com grande aprendizado: aprendendo o uso de dados persistentes e comunicação entre componentes',
       img: SEstoqueControle,
-      techs: [FlutterLogo]
+      techs: [FlutterLogo],
+      link:"https://github.com/JonatasMSS/ControleEstoqueApp"
     },
     {
       title: 'Pokedex Site',
       description: 'Um dos primeiros projetos criados por mim. Criei enquanto estava em um bootcamp da DIO sobre formação Javascript, Html,Css e React. Utilizei conceitos com arquitetura de pastas e requisições HTTP. Tive, também, o contato com o DOM usando Javascript.',
       img: SPokedex,
-      techs: [HtmlLogo, JavaScriptLogo, CssLogo]
+      techs: [HtmlLogo, JavaScriptLogo, CssLogo],
+      link:"https://github.com/JonatasMSS/jonatasPokedex.github.io"
     }
   ]
 
@@ -86,9 +91,9 @@ function App() {
           <span>Olá! Sou Jonatas Miguel,</span>
           <span>Desenvolvedor Front-end</span>
           <div className="flex gap-2 mt-4 ">
-            <a href="" className="hover:scale-125 transition-transform"><img src={SimpleLinkedin} alt="Simple Linkedin" className="w-8 md:w-12 lg:w-16" /></a>
+            <a href="https://www.linkedin.com/in/jonatasmss/" className="hover:scale-125 transition-transform"><img src={SimpleLinkedin} alt="Simple Linkedin" className="w-8 md:w-12 lg:w-16" /></a>
 
-            <a href="" className="hover:scale-125 transition-transform"><img src={SimpleGithub} alt="Simple Github" className="w-8 md:w-12 lg:w-16" /></a>
+            <a href="https://github.com/JonatasMSS" className="hover:scale-125 transition-transform"><img src={SimpleGithub} alt="Simple Github" className="w-8 md:w-12 lg:w-16" /></a>
           </div>
         </div>
 
@@ -131,6 +136,7 @@ function App() {
                 description={e.description}
                 img={e.img}
                 techs={e.techs}
+                link={e.link}
               />
             ))
             : ProjectsDataToComponent.map((e, i) => (
@@ -140,6 +146,7 @@ function App() {
                 img={e.img}
                 key={i}
                 techs={e.techs}
+                link={e.link}
               />
             ))
 

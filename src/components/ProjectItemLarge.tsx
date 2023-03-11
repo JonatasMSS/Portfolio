@@ -6,18 +6,15 @@ interface ProjectItemLarge {
     img: string;
     description: string;
     techs?: Array<string>;
+    link?:string;
 }
 
 
 export function ProjectItemLarge({ ...props }: ProjectItemLarge) {
     return (
         <div className=" flex w-full items-center relative mb-20 ">
-
-
-
-
             <div className=" w-1/2  max-h-64 overflow-clip border-2 relative object-fill rounded-lg bg-gray-400 border-black shadow-cartoon" >
-                <div className="absolute w-full h-full bg-defaultBlue/40 hover:bg-transparent transition-colors duration-500 cursor-pointer "></div>
+                <a href={props.link} className="absolute w-full h-full bg-defaultBlue/40 hover:bg-transparent transition-colors duration-500 cursor-pointer "></a>
                 <img src={props.img} className="rounded-lg w-full lg:w-full lg:h-64" />
             </div>
 
