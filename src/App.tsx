@@ -14,6 +14,8 @@ import TailwindCss from './assets/tailwindcssLogo.png';
 import ReactLogo from "./assets/reactLogo.png";
 import SimpleLinkedin from './assets/SimpleLinkedin.svg';
 import SimpleGithub from './assets/SimpleGit.svg';
+import TypescriptLogo from './assets/typescript.png';
+
 
 import SPokedex from './assets/pokedex.png';
 import SHabitSite from './assets/habitsSite.png';
@@ -45,7 +47,7 @@ function App() {
 
 
   const SkillsDataToComponent: Array<{ name: string, exp: 0.5 | 1 | 1.5 | 2, img: string }> = [
-    { name: 'React', exp: 1, img: ReactLogo }, { name: 'Javascript', exp: 1.5, img: JavaScriptLogo }, { name: 'Html', exp: 2, img: HtmlLogo }, { name: 'Css', exp: 1.5, img: CssLogo }, { name: 'TailwindCss', exp: 0.5, img: TailwindCss }, { name: 'Flutter', exp: 2, img: FlutterLogo }, { name: 'Prisma', exp: 0.5, img: PrismaLogo }, { name: 'Fastify', exp: 0.5, img: FastifyLogo }, { name: 'Git', exp: 1.5, img: GitLogo }
+    { name: 'React', exp: 1, img: ReactLogo }, {name:'Typescript',img:TypescriptLogo,exp:1},{ name: 'Javascript', exp: 1.5, img: JavaScriptLogo }, { name: 'Html', exp: 2, img: HtmlLogo }, { name: 'Css', exp: 1.5, img: CssLogo }, { name: 'TailwindCss', exp: 0.5, img: TailwindCss }, { name: 'Flutter', exp: 2, img: FlutterLogo }, { name: 'Prisma', exp: 0.5, img: PrismaLogo }, { name: 'Fastify', exp: 0.5, img: FastifyLogo }, { name: 'Git', exp: 1.5, img: GitLogo }
   ]
 
   const ProjectsDataToComponent: Array<projectProps> = [
