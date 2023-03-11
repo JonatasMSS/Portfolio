@@ -29,10 +29,10 @@ import { ProjectItemLarge } from "./components/ProjectItemLarge";
 
 
 type projectProps = {
-  title:string;
-  description:string;
-  img:string;
-  techs:Array<string>
+  title: string;
+  description: string;
+  img: string;
+  techs: Array<string>
 }
 
 function App() {
@@ -47,30 +47,30 @@ function App() {
     { name: 'React', exp: 1, img: ReactLogo }, { name: 'Javascript', exp: 1.5, img: JavaScriptLogo }, { name: 'Html', exp: 2, img: HtmlLogo }, { name: 'Css', exp: 1.5, img: CssLogo }, { name: 'TailwindCss', exp: 0.5, img: TailwindCss }, { name: 'Flutter', exp: 2, img: FlutterLogo }, { name: 'Prisma', exp: 0.5, img: PrismaLogo }, { name: 'Fastify', exp: 0.5, img: FastifyLogo }, { name: 'Git', exp: 1.5, img: GitLogo }
   ]
 
-  const ProjectsDataToComponent:Array<projectProps> =[
+  const ProjectsDataToComponent: Array<projectProps> = [
     {
-      title:'Site de Delivery',
-      description:'Baseando-me na necessidade de um cliente, tive a ideia de criar um site de deliveries. Todo o desing foi baseando-se nas informações dadas pelo cliente. Além disso, optei por usar o Firebase Hosting e envio de pedidos por meio da Api whatsapp.',
-      img:SDelivery,
-      techs:[ReactLogo,TailwindCss,JavaScriptLogo]
+      title: 'Site de Delivery',
+      description: 'Baseando-me na necessidade de um cliente, tive a ideia de criar um site de deliveries. Todo o desing foi baseando-se nas informações dadas pelo cliente. Além disso, optei por usar o Firebase Hosting e envio de pedidos por meio da Api whatsapp.',
+      img: SDelivery,
+      techs: [ReactLogo, TailwindCss, JavaScriptLogo]
     },
     {
-      title:'Registro e analise de hábitos',
-      description:'Criado durante um evento da Rocketseat, o site de hábitos foi uma grande oportunidade de aprendizados. Utilizei no projeto ferramentas de estilização, aprendi a lidar com arquitetura de pastas e uso de ORM"s para criação de banco de dados.',
-      img:SHabitSite,
-      techs:[ReactLogo,JavaScriptLogo,FastifyLogo,PrismaLogo]
+      title: 'Registro e analise de hábitos',
+      description: 'Criado durante um evento da Rocketseat, o site de hábitos foi uma grande oportunidade de aprendizados. Utilizei no projeto ferramentas de estilização, aprendi a lidar com arquitetura de pastas e uso de ORM"s para criação de banco de dados.',
+      img: SHabitSite,
+      techs: [ReactLogo, JavaScriptLogo, FastifyLogo, PrismaLogo]
     },
     {
-      title:'App de controle de estoque e vendas',
-      description:'Esse projeto criei baseando-se na necessidade de um pequeno fornecedor de produtos. A ideia era criar um App que pudesse ajuda-lo a controlar seu estoque e gerar documentos de vendas desses produtos as lojas. Foi um dos primeiros desáfios que tive, o qual veio com grande aprendizado: aprendendo o uso de dados persistentes e comunicação entre componentes',
-      img:SEstoqueControle,
-      techs:[FlutterLogo]
+      title: 'App de controle de estoque e vendas',
+      description: 'Esse projeto criei baseando-se na necessidade de um pequeno fornecedor de produtos. A ideia era criar um App que pudesse ajuda-lo a controlar seu estoque e gerar documentos de vendas desses produtos as lojas. Foi um dos primeiros desáfios que tive, o qual veio com grande aprendizado: aprendendo o uso de dados persistentes e comunicação entre componentes',
+      img: SEstoqueControle,
+      techs: [FlutterLogo]
     },
     {
-      title:'Pokedex Site',
-      description:'Um dos primeiros projetos criados por mim. Criei enquanto estava em um bootcamp da DIO sobre formação Javascript, Html,Css e React. Utilizei conceitos com arquitetura de pastas e requisições HTTP. Tive, também, o contato com o DOM usando Javascript.',
-      img:SPokedex,
-      techs:[HtmlLogo,JavaScriptLogo,CssLogo]
+      title: 'Pokedex Site',
+      description: 'Um dos primeiros projetos criados por mim. Criei enquanto estava em um bootcamp da DIO sobre formação Javascript, Html,Css e React. Utilizei conceitos com arquitetura de pastas e requisições HTTP. Tive, também, o contato com o DOM usando Javascript.',
+      img: SPokedex,
+      techs: [HtmlLogo, JavaScriptLogo, CssLogo]
     }
   ]
 
@@ -124,7 +124,7 @@ function App() {
         <span className="font-semibold md:text-2xl lg:text-3xl">Projetos</span>
         {
           isSmall ?
-            ProjectsDataToComponent.map((e,i) => (
+            ProjectsDataToComponent.map((e, i) => (
               <ProjectItemMobile
                 key={i}
                 title={e.title}
@@ -133,7 +133,7 @@ function App() {
                 techs={e.techs}
               />
             ))
-            : ProjectsDataToComponent.map((e,i) => (
+            : ProjectsDataToComponent.map((e, i) => (
               <ProjectItemLarge
                 title={e.title}
                 description={e.description}
@@ -142,10 +142,19 @@ function App() {
                 techs={e.techs}
               />
             ))
-            
+
         }
       </div>
 
+      {/* Contact-me Section */}
+      <div className=" w-full items-center flex flex-col gap-5 font-archivo my-20 md:px-20 lg:px-40 ">
+        <span className="font-semibold md:text-2xl lg:text-3xl"> Fale comigo </span>
+        <span className="text-base text-center md:text-2xl lg:text-3xl">Estou buscando uma primeira oportunidade em trabalhar em uma empresa no setor de desenvolvimento ou em um projeto em equipe</span>
+        <a href="" className="flex items-center w-fit bg-white border-2 p-2 md:p-5  rounded-lg border-black hover:shadow-cartoon hover:scale-110 transition-all duration-200 ease-in-out">
+          <span className="font-archivo font-semibold text-sm md:text-xl lg:text-2xl ">Entre em contato</span>
+        </a>  
+      </div>
+      
     </div>
   )
 }
