@@ -28,15 +28,7 @@ import { SkillContainer } from "./components/SkillContainer";
 
 import { ProjectItemMobile } from "./components/ProjectItemMobie";
 import { ProjectItemLarge } from "./components/ProjectItemLarge";
-
-
-type projectProps = {
-  title: string;
-  description: string;
-  img: string;
-  techs: Array<string>
-  link?:string;
-}
+import ProjectModel from "./models/Project-model";
 
 function App() {
 
@@ -50,7 +42,7 @@ function App() {
     { name: 'React', exp: 1, img: ReactLogo }, {name:'Typescript',img:TypescriptLogo,exp:1},{ name: 'Javascript', exp: 1.5, img: JavaScriptLogo }, { name: 'Html', exp: 2, img: HtmlLogo }, { name: 'Css', exp: 1.5, img: CssLogo }, { name: 'TailwindCss', exp: 0.5, img: TailwindCss }, { name: 'Flutter', exp: 2, img: FlutterLogo }, { name: 'Prisma', exp: 0.5, img: PrismaLogo }, { name: 'Fastify', exp: 0.5, img: FastifyLogo }, { name: 'Git', exp: 1.5, img: GitLogo }
   ]
 
-  const ProjectsDataToComponent: Array<projectProps> = [
+  const ProjectsDataToComponent: Array<ProjectModel> = [
     {
       title: 'Site de Delivery',
       description: 'Baseando-me na necessidade de um cliente, tive a ideia de criar um site de deliveries. Todo o desing foi baseando-se nas informações dadas pelo cliente. Além disso, optei por usar o Firebase Hosting e envio de pedidos por meio da Api whatsapp.',
