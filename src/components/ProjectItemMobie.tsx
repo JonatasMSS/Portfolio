@@ -14,8 +14,8 @@ interface ProjectItemMobileProps {
 export function ProjectItemMobile({ ...props }: ProjectItemMobileProps) {
     return (
         <div className="w-10/12 flex flex-col items-center rounded-lg bg-white shadow-cartoon border-2 border-black">
-            <div className=" p-2 my-3">
-                <img src={props.img} className="rounded-sm  " />
+            <div  className="w-full rounded-lg overflow-clip max-h-60 p-2 my-3">
+                <img src={props.img} className="rounded-lg " />
             </div>
 
             {/* Text section */}
