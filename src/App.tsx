@@ -1,9 +1,10 @@
 import "./styles/main.css";
 
-import TesteImage from './assets/ImageTeste.png';
-import EuSB from './assets/Eu sem borda.svg';
-import FastifyLogo from './assets/FastifyLogo.png';
 
+import EuSB from './assets/Eu sem borda.svg';
+
+
+import FastifyLogo from './assets/FastifyLogo.png';
 import JavaScriptLogo from "./assets/javascript-logo.png";
 import HtmlLogo from './assets/HtmlLogo.png';
 import CssLogo from './assets/cssLogo.png';
@@ -29,6 +30,7 @@ import { SkillContainer } from "./components/SkillContainer";
 import { ProjectItemMobile } from "./components/ProjectItemMobie";
 import { ProjectItemLarge } from "./components/ProjectItemLarge";
 import ProjectModel from "./models/Project-model";
+import SkillModel from "./models/Skill-model";
 
 function App() {
 
@@ -38,7 +40,7 @@ function App() {
 
 
 
-  const SkillsDataToComponent: Array<{ name: string, exp: 0.5 | 1 | 1.5 | 2, img: string }> = [
+  const SkillsDataToComponent: Array<SkillModel> = [
     { name: 'React', exp: 1, img: ReactLogo }, {name:'Typescript',img:TypescriptLogo,exp:1},{ name: 'Javascript', exp: 1.5, img: JavaScriptLogo }, { name: 'Html', exp: 2, img: HtmlLogo }, { name: 'Css', exp: 1.5, img: CssLogo }, { name: 'TailwindCss', exp: 0.5, img: TailwindCss }, { name: 'Flutter', exp: 2, img: FlutterLogo }, { name: 'Prisma', exp: 0.5, img: PrismaLogo }, { name: 'Fastify', exp: 0.5, img: FastifyLogo }, { name: 'Git', exp: 1.5, img: GitLogo }
   ]
 
